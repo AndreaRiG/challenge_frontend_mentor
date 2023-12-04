@@ -1,0 +1,62 @@
+
+@use 'initial';
+@use 'variables'; 
+@use 'navbar';
+@use 'header';
+@use 'modal-navbar';
+@use 'gallery';
+@use 'details';
+@use 'input';
+@use 'modal_cart';
+@use 'modal-gallery';
+
+// asi se importan los tales partials o como se llamen los @ deben ir desde el inicio para ser importadas
+
+
+// Aqui sass lo hace con una cosa que se llama nesting mas abajo es un poco mas largo para css
+.main-container{
+    width:375px;
+    // border: 1px solid rgb(44, 2, 2);
+    margin: auto;
+    position:relative;
+    @media(min-width: 1115px){
+        width:1115px;
+    }
+}
+
+.content{
+    @media(min-width: 1115px){
+        display:flex;
+        padding: 90px 50px;
+        gap: 124px;
+    }
+       
+}
+
+.show{
+    display:block;
+}
+
+.cart-empty{
+    font-weight: 700;
+    color: variables.$Black-modal;
+    text-align: center;
+    margin-top: 30px;
+
+}
+
+
+
+// con css tradicional se haría este codigo para que sea responsivo
+
+// .main-container{
+//     width:375px;
+//     border: 1px black;
+//     margin: auto;
+// }
+// @media(min-width: 1115px){
+//     .main-container{
+//         width:1115px;
+//     }
+// }
+
